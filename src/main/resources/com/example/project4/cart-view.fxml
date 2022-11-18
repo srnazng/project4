@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.CartController">
+   <children>
+      <Label text="Current Order">
+         <font>
+            <Font name="Avenir Next Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="50.0" prefWidth="200.0">
+         <children>
+            <Label text="Order Number">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="orderNumber" editable="false">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+      <ListView fx:id="pizzaList" prefHeight="200.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </ListView>
+      <HBox prefHeight="50.0" prefWidth="200.0">
+         <children>
+            <Label text="Subtotal $">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin></Label>
+            <TextField fx:id="subtotal" editable="false" prefWidth="125.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></TextField>
+            <Label text="Sales Tax $">
+               <HBox.margin>
+                  <Insets left="20.0" top="5.0" />
+               </HBox.margin></Label>
+            <TextField fx:id="salesTax" editable="false" prefWidth="125.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" prefWidth="125.0" text="Remove Pizza" onMouseClicked="#removePizza">
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="50.0" prefWidth="200.0">
+         <children>
+            <Label text="Order Total $">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="orderTotal" editable="false" prefWidth="125.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" prefWidth="125.0" text="Place Order" onMouseClicked="#placeOrder">
+               <HBox.margin>
+                  <Insets left="77.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefWidth="125.0" text="Clear Order" onMouseClicked="#clearOrder">
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
