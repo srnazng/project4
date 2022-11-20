@@ -1,5 +1,6 @@
 package com.example.project4;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import static com.example.project4.StoreOrder.generateOrderId;
@@ -10,6 +11,8 @@ public class Order implements Customizable{
     private ArrayList<Pizza> pizzaList;
     private int orderNumber;
     private static final double SALES_TAX_RATE = 0.06625;
+
+    private static final DecimalFormat df = new DecimalFormat("0.00");
 
     public int getOrderNumber() {
         return orderNumber;
@@ -76,5 +79,15 @@ public class Order implements Customizable{
     public boolean remove(Object obj) {
         Pizza pizza = (Pizza) obj;
         return pizzaList.remove(pizza);
+    }
+
+    @Override
+    public String toString(){
+        String returnString = "Order Number " + orderNumber + "\n";
+        for(Pizza p : pizzaList){
+            returnString += p.toString() + "\n";
+        }
+        returnString += "Order total: " + df.format(getTotal()) + "\n";
+        return returnString;
     }
 }

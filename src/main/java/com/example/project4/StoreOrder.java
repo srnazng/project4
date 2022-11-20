@@ -1,10 +1,14 @@
 package com.example.project4;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class StoreOrder implements Customizable{
     private static ArrayList<Order> orderList;
     private static Order currentOrder;
+
 
     public static void completeCurrentOrder(){
         orderList.add(currentOrder);
@@ -51,6 +55,19 @@ public class StoreOrder implements Customizable{
     public static boolean cancelOrder(int id){
         Order o = getOrder(id);
         return orderList.remove(o);
+    }
+
+    public static void export(File file){
+        try{
+            PrintWriter pw = new PrintWriter(file);
+            for (Order order : orderList){
+                pw.println(order);
+            }
+
+            pw.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
