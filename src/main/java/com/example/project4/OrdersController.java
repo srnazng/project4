@@ -26,7 +26,7 @@ public class OrdersController {
 
     @FXML
     public void initialize(){
-        ArrayList<Integer> orderNumberList = StoreOrder.getOrderNumbers();
+        ArrayList<Integer> orderNumberList = StoreOrder.storeOrder.getOrderNumbers();
         orderNumber.setItems(FXCollections.observableArrayList(orderNumberList));
         if(orderNumberList.size() > 0){
             Integer orderNum = orderNumberList.get(0);
@@ -43,7 +43,7 @@ public class OrdersController {
     public void setOrder(){
         Integer orderNum = (Integer) orderNumber.getValue();
         if(orderNum != null){
-            Order order = StoreOrder.getOrder(orderNum);
+            Order order = StoreOrder.storeOrder.getOrder(orderNum);
             pizzaList.setItems(FXCollections.observableArrayList(order.getPizzaList()));
             orderTotal.setText(df.format(order.getTotal()));
         }
@@ -55,7 +55,7 @@ public class OrdersController {
     @FXML
     public void cancelOrder(){
         Integer orderNum = (Integer) orderNumber.getValue();
-        StoreOrder.cancelOrder(orderNum);
+        StoreOrder.storeOrder.cancelOrder(orderNum);
         initialize();
     }
 
@@ -68,6 +68,6 @@ public class OrdersController {
         Stage stage = new Stage();
         File targetFile = chooser.showSaveDialog(stage); //get the reference of the target file
 
-        StoreOrder.export(targetFile);
+        StoreOrder.storeOrder.export(targetFile);
     }
 }

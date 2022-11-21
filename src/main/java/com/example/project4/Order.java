@@ -3,10 +3,7 @@ package com.example.project4;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-import static com.example.project4.StoreOrder.generateOrderId;
-
 public class Order implements Customizable{
-    private boolean completed;
     private boolean valid;
     private ArrayList<Pizza> pizzaList;
     private int orderNumber;
@@ -19,9 +16,8 @@ public class Order implements Customizable{
     }
 
     public Order(){
-        completed = false;
         valid = true;
-        orderNumber = generateOrderId();
+        orderNumber = StoreOrder.storeOrder.generateOrderId();
         pizzaList = new ArrayList<>();
     }
 
@@ -66,7 +62,6 @@ public class Order implements Customizable{
     }
 
     public void finishOrder(){
-        completed = true;
     }
 
     @Override

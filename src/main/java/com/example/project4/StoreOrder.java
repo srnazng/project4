@@ -6,17 +6,18 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class StoreOrder implements Customizable{
-    private static ArrayList<Order> orderList;
-    private static Order currentOrder;
+    private ArrayList<Order> orderList;
+    private Order currentOrder;
 
+    public static StoreOrder storeOrder = new StoreOrder();
 
-    public static void completeCurrentOrder(){
+    public void completeCurrentOrder(){
         orderList.add(currentOrder);
         currentOrder.finishOrder();
         currentOrder = new Order();
     }
 
-    public static Order getCurrentOrder(){
+    public Order getCurrentOrder(){
         if(orderList == null){
             orderList = new ArrayList<>();
         }
@@ -26,7 +27,7 @@ public class StoreOrder implements Customizable{
         return currentOrder;
     }
 
-    public static ArrayList<Integer> getOrderNumbers(){
+    public ArrayList<Integer> getOrderNumbers(){
         if(orderList == null){
             orderList = new ArrayList<>();
         }
@@ -39,11 +40,11 @@ public class StoreOrder implements Customizable{
         return list;
     }
 
-    public static int generateOrderId(){
+    public int generateOrderId(){
         return orderList.size() + 1;
     }
 
-    public static Order getOrder(int id){
+    public Order getOrder(int id){
         for(Order o : orderList){
             if(o.getOrderNumber() == id){
                 return o;
@@ -52,12 +53,12 @@ public class StoreOrder implements Customizable{
         return null;
     }
 
-    public static boolean cancelOrder(int id){
+    public boolean cancelOrder(int id){
         Order o = getOrder(id);
         return orderList.remove(o);
     }
 
-    public static void export(File file){
+    public void export(File file){
         try{
             PrintWriter pw = new PrintWriter(file);
             for (Order order : orderList){

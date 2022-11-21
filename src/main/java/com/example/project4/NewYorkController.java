@@ -2,12 +2,10 @@ package com.example.project4;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.control.ButtonBar.ButtonData;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -48,8 +46,9 @@ public class NewYorkController {
         }
         pizza.setSize(size);
         pizza.add(selectedToppings);
-        Order currentOrder = StoreOrder.getCurrentOrder();
+        Order currentOrder = StoreOrder.storeOrder.getCurrentOrder();
         currentOrder.add(pizza);
+        Popup.showPopup("Added Pizza", "Pizza Successfully Added!", false);
         reset();
     }
 

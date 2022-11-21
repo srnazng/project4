@@ -32,11 +32,14 @@ class BuildYourOwnTest {
     private static final double largeSixToppings = 22.53;
     private static final double largeSevenToppings = 24.12;
 
+    private static final double toppingLimitError = -1;
+
     private static final double fuzzFactor = 0.0001; //how close doubles can be before they are considered equal
     @Test
     void testSmall(){
         //Small pizzas should have a 8.99 base price, and add 1.59 per topping.
         //Prices should be given by constants above
+        //Price should return -1 if there are more than 7 toppings
         NYPizza factory = new NYPizza();
         Pizza pizza = factory.createBuildYourOwn();
         pizza.setSize(Size.SMALL);
@@ -62,6 +65,9 @@ class BuildYourOwnTest {
 
         pizza.add(Topping.OLIVES);
         assertEquals(pizza.price(), smallSevenToppings, fuzzFactor);
+
+        pizza.add(Topping.PEPPERS);
+        assertEquals(pizza.price(), toppingLimitError, fuzzFactor);
     }
 
     @Test
@@ -93,6 +99,9 @@ class BuildYourOwnTest {
 
         pizza.add(Topping.OLIVES);
         assertEquals(pizza.price(), mediumSevenToppings, fuzzFactor);
+
+        pizza.add(Topping.PEPPERS);
+        assertEquals(pizza.price(), toppingLimitError, fuzzFactor);
     }
 
     @Test
@@ -124,5 +133,8 @@ class BuildYourOwnTest {
 
         pizza.add(Topping.OLIVES);
         assertEquals(pizza.price(), largeSevenToppings, fuzzFactor);
+
+        pizza.add(Topping.PEPPERS);
+        assertEquals(pizza.price(), toppingLimitError, fuzzFactor);
     }
 }

@@ -48,7 +48,7 @@ public class ChicagoController {
         }
         pizza.setSize(size);
         pizza.add(selectedToppings);
-        Order currentOrder = StoreOrder.getCurrentOrder();
+        Order currentOrder = StoreOrder.storeOrder.getCurrentOrder();
         currentOrder.add(pizza);
         reset();
     }

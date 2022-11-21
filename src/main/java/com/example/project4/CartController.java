@@ -16,29 +16,29 @@ public class CartController {
 
     @FXML
     public void placeOrder(){
-        StoreOrder.completeCurrentOrder();
+        StoreOrder.storeOrder.completeCurrentOrder();
         initialize();
     }
 
     @FXML
     public void removePizza(){
         Pizza pizza = (Pizza) pizzaList.getSelectionModel().getSelectedItem();
-        StoreOrder.getCurrentOrder().remove(pizza);
+        StoreOrder.storeOrder.getCurrentOrder().remove(pizza);
         initialize();
     }
 
     @FXML
     public void clearOrder(){
-        StoreOrder.getCurrentOrder().clear();
+        StoreOrder.storeOrder.getCurrentOrder().clear();
         initialize();
     }
 
     @FXML
     public void initialize(){
-        pizzaList.setItems(FXCollections.observableArrayList(StoreOrder.getCurrentOrder().getPizzaList()));
-        subtotal.setText(df.format(StoreOrder.getCurrentOrder().getSubtotal()));
-        salesTax.setText(df.format(StoreOrder.getCurrentOrder().getSalesTax()));
-        orderTotal.setText(df.format(StoreOrder.getCurrentOrder().getTotal()));
-        orderNumber.setText(StoreOrder.generateOrderId() + "");
+        pizzaList.setItems(FXCollections.observableArrayList(StoreOrder.storeOrder.getCurrentOrder().getPizzaList()));
+        subtotal.setText(df.format(StoreOrder.storeOrder.getCurrentOrder().getSubtotal()));
+        salesTax.setText(df.format(StoreOrder.storeOrder.getCurrentOrder().getSalesTax()));
+        orderTotal.setText(df.format(StoreOrder.storeOrder.getCurrentOrder().getTotal()));
+        orderNumber.setText(StoreOrder.storeOrder.generateOrderId() + "");
     }
 }

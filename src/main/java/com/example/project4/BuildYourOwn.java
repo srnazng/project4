@@ -15,10 +15,13 @@ public class BuildYourOwn extends Pizza{
     @Override
     public double price() {
         Size size = getSize();
+        if (getToppings().size() > 7){
+            return -1;
+        }
         double topping_price = getToppings().size() * 1.59;
         if(size == Size.SMALL) return SMALL_PRICE + topping_price;
         if(size == Size.MEDIUM) return MED_PRICE + topping_price;
-        else return LARGE_PRICE + topping_price;
+        return LARGE_PRICE + topping_price;
     }
 
     public static double calculatePrice(Size size, int numToppings) {
