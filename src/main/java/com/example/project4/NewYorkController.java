@@ -108,11 +108,14 @@ public class NewYorkController {
     @FXML
     public void addTopping(){
         Topping topping = (Topping) newYorkAvailableToppings.getSelectionModel().getSelectedItem();
-        if(topping != null && selectedToppings.size() < 7){
+        if(topping != null && selectedToppings.size() < Pizza.MAX_TOPPINGS){
             availableToppings.remove(topping);
             selectedToppings.add(topping);
             newYorkAvailableToppings.setItems(FXCollections.observableArrayList(availableToppings));
             newYorkSelectedToppings.setItems(FXCollections.observableArrayList(selectedToppings));
+        }
+        else{
+            Popup.showPopup("Build Your Own", "Maximum Number of Toppings (7) Exceeded", true);
         }
         updatePrice();
     }

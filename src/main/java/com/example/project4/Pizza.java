@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public abstract class Pizza implements Customizable {
     private static final DecimalFormat df = new DecimalFormat("0.00");
+    public static final int MAX_TOPPINGS = 7;
     private ArrayList<Topping> toppings;
     private Crust crust;
     private Size size;

@@ -54,9 +54,16 @@ public class OrdersController {
 
     @FXML
     public void cancelOrder(){
+        if(orderNumber.getValue() == null){
+            Popup.showPopup("Cancel Order Error", "No Order Selected", true);
+            return;
+        }
+
         Integer orderNum = (Integer) orderNumber.getValue();
+
         StoreOrder.storeOrder.cancelOrder(orderNum);
         initialize();
+        Popup.showPopup("Cancel Order", "Order Successfully Cancelled!", false);
     }
 
     @FXML

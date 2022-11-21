@@ -50,6 +50,7 @@ public class ChicagoController {
         pizza.add(selectedToppings);
         Order currentOrder = StoreOrder.storeOrder.getCurrentOrder();
         currentOrder.add(pizza);
+        Popup.showPopup("Added Pizza", "Pizza Successfully Added!", false);
         reset();
     }
 
@@ -109,11 +110,14 @@ public class ChicagoController {
     @FXML
     public void addTopping(){
         Topping topping = (Topping) chicagoAvailableToppings.getSelectionModel().getSelectedItem();
-        if(topping != null && selectedToppings.size() < 7){
+        if(topping != null && selectedToppings.size() < Pizza.MAX_TOPPINGS){
             availableToppings.remove(topping);
             selectedToppings.add(topping);
             chicagoAvailableToppings.setItems(FXCollections.observableArrayList(availableToppings));
             chicagoSelectedToppings.setItems(FXCollections.observableArrayList(selectedToppings));
+        }
+        else{
+            Popup.showPopup("Build Your Own", "Maximum Number of Toppings (7) Exceeded", true);
         }
         updatePrice();
     }

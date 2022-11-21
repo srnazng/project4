@@ -16,21 +16,32 @@ public class CartController {
 
     @FXML
     public void placeOrder(){
+        if(StoreOrder.storeOrder.getCurrentOrder().getPizzaList().size() < 1){
+            Popup.showPopup("Empty Order", "No Pizzas Added to Order", true);
+            return;
+        }
         StoreOrder.storeOrder.completeCurrentOrder();
         initialize();
+        Popup.showPopup("Order Placed", "Order Successfully Placed!", false);
     }
 
     @FXML
     public void removePizza(){
+        if(StoreOrder.storeOrder.getCurrentOrder().getPizzaList().size() < 1 || pizzaList.getSelectionModel().getSelectedItem() == null){
+            Popup.showPopup("Error Removing Pizza", "No Pizza Selected", true);
+            return;
+        }
         Pizza pizza = (Pizza) pizzaList.getSelectionModel().getSelectedItem();
         StoreOrder.storeOrder.getCurrentOrder().remove(pizza);
         initialize();
+        Popup.showPopup("Pizza Removed", "Pizza Successfully Removed!", false);
     }
 
     @FXML
     public void clearOrder(){
         StoreOrder.storeOrder.getCurrentOrder().clear();
         initialize();
+        Popup.showPopup("Clear Order", "Order Successfully Cleared!", false);
     }
 
     @FXML
