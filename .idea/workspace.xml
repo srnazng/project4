@@ -7,12 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c295e93c-d323-438a-8ef3-03be5d905f48" name="Changes" comment="finish javadoc">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/com.example.project4/com/example/project4/PizzeriaApplication.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.example.project4/com/example/project4/PizzeriaApplication.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/PizzeriaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="c295e93c-d323-438a-8ef3-03be5d905f48" name="Changes" comment="Main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +141,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669061530644</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Main">
+      <created>1669064085148</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669064085148</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Main">
+      <created>1669064179466</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669064179466</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +175,7 @@
     <MESSAGE value="error messages" />
     <MESSAGE value="start javadoc" />
     <MESSAGE value="finish javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish javadoc" />
+    <MESSAGE value="Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main" />
   </component>
 </project>
