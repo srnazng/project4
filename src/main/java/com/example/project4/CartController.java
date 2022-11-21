@@ -7,6 +7,11 @@ import javafx.scene.control.TextField;
 
 import java.text.DecimalFormat;
 
+/**
+ * The CartController class is the controller for the cart-view.fxml file.
+ * This class initializes UI components and handles user interaction events.
+ * @author Serena Zeng, Jackson Lee
+ */
 public class CartController {
     private static final DecimalFormat df = new DecimalFormat("0.00");
     @FXML
@@ -14,6 +19,10 @@ public class CartController {
     @FXML
     TextField orderNumber, subtotal, salesTax, orderTotal;
 
+    /**
+     * Called when "Place Order" button clicked. Completes the order and clears the order information
+     * to allow for the next order. A popup is shown on success and on failure.
+     */
     @FXML
     public void placeOrder(){
         if(StoreOrder.storeOrder.getCurrentOrder().getPizzaList().size() < 1){
@@ -25,9 +34,13 @@ public class CartController {
         Popup.showPopup("Order Placed", "Order Successfully Placed!", false);
     }
 
+    /**
+     * Removes the selected pizza from the current order. A popup is shown on success and on failure.
+     */
     @FXML
     public void removePizza(){
-        if(StoreOrder.storeOrder.getCurrentOrder().getPizzaList().size() < 1 || pizzaList.getSelectionModel().getSelectedItem() == null){
+        if(StoreOrder.storeOrder.getCurrentOrder().getPizzaList().size() < 1 ||
+                pizzaList.getSelectionModel().getSelectedItem() == null){
             Popup.showPopup("Error Removing Pizza", "No Pizza Selected", true);
             return;
         }
@@ -37,6 +50,9 @@ public class CartController {
         Popup.showPopup("Pizza Removed", "Pizza Successfully Removed!", false);
     }
 
+    /**
+     * Remove all pizzas from current order. A popup is shown on success.
+     */
     @FXML
     public void clearOrder(){
         StoreOrder.storeOrder.getCurrentOrder().clear();
@@ -44,6 +60,9 @@ public class CartController {
         Popup.showPopup("Clear Order", "Order Successfully Cleared!", false);
     }
 
+    /**
+     * Initialize UI including list of pizzas in order, price amounts, and order number.
+     */
     @FXML
     public void initialize(){
         pizzaList.setItems(FXCollections.observableArrayList(StoreOrder.storeOrder.getCurrentOrder().getPizzaList()));

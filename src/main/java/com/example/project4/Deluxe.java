@@ -28,8 +28,8 @@ public class Deluxe extends Pizza{
      * @return ArrayList of Topping objects
      */
     public static ArrayList<Topping> getDeluxeToppings(){
-        return new ArrayList<>(List.of(new Topping[]{Topping.PEPPERONI, Topping.SAUSAGE,
-                Topping.MUSHROOMS, Topping.ONIONS, Topping.PEPPERS}));
+        return new ArrayList<>(List.of(Topping.PEPPERONI, Topping.SAUSAGE,
+                Topping.MUSHROOMS, Topping.ONIONS, Topping.PEPPERS));
     }
 
     /**
@@ -63,7 +63,6 @@ public class Deluxe extends Pizza{
      */
     @Override
     public String toString(){
-        StringBuilder str = new StringBuilder("Deluxe ").append(super.toString());
-        return str.toString();
+        return "Deluxe " + super.toString();
     }
 }

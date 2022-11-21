@@ -12,6 +12,11 @@ import javafx.scene.image.ImageView;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+/**
+ * The ChicagoController class is the controller for the chicago-view.fxml file.
+ * This class initializes UI components and handles user interaction events.
+ * @author Serena Zeng, Jackson Lee
+ */
 public class ChicagoController {
     private static final DecimalFormat df = new DecimalFormat("0.00");
     private ArrayList<Topping> availableToppings;
@@ -29,6 +34,10 @@ public class ChicagoController {
     @FXML
     private ToggleGroup chicagoSize;
 
+    /**
+     * Create a Chicago pizza object with the user-selected
+     * modifications and add to current order.
+     */
     @FXML
     public void addToOrder(){
         String pizzaType = chicagoTypeSelect.getValue().toString();
@@ -54,6 +63,10 @@ public class ChicagoController {
         reset();
     }
 
+    /**
+     * Called when new Size radio button clicked.
+     * Update prices based on pizza type and newly selected size.
+     */
     @FXML
     public void updateSize(){
         String toggleSelection = chicagoSize.selectedToggleProperty()
@@ -70,6 +83,9 @@ public class ChicagoController {
         updatePrice();
     }
 
+    /**
+     * Update view (price, toppings, image) when a new pizza type is selected.
+     */
     @FXML
     public void updateView(){
         String pizzaType = chicagoTypeSelect.getValue().toString();
@@ -107,6 +123,11 @@ public class ChicagoController {
         updatePrice();
     }
 
+    /**
+     * Called when the button to add topping is pressed and the Build Your Own pizza type is selected.
+     * Price is recalculated and topping lists are updated if topping successfully added.
+     * Displays error if user attempts to add more than 7 toppings.
+     */
     @FXML
     public void addTopping(){
         Topping topping = (Topping) chicagoAvailableToppings.getSelectionModel().getSelectedItem();
@@ -122,6 +143,10 @@ public class ChicagoController {
         updatePrice();
     }
 
+    /**
+     * Called when the button to remove selected topping is pressed and the Build Your Own pizza type is selected.
+     * Price is recalculated and topping lists are updated if topping successfully removed.
+     */
     @FXML
     public void removeTopping(){
         Topping topping = (Topping) chicagoSelectedToppings.getSelectionModel().getSelectedItem();
@@ -134,6 +159,9 @@ public class ChicagoController {
         updatePrice();
     }
 
+    /**
+     * Initialize UI components
+     */
     @FXML
     public void initialize(){
         String[] pizzaTypes = {"Deluxe", "BBQ Chicken", "Meatzza", "Build Your Own"};
@@ -141,6 +169,9 @@ public class ChicagoController {
         reset();
     }
 
+    /**
+     * Reset view. Called after pizza is successfully ordered.
+     */
     private void reset(){
         chicagoTypeSelect.setValue("Build Your Own");
         availableToppings = new ArrayList<>(Topping.getAvailableToppings());
@@ -150,11 +181,17 @@ public class ChicagoController {
         updatePrice();
     }
 
+    /**
+     * Update ListView UI component containing available toppings and list of selected toppings
+     */
     private void updateToppingLists(){
         chicagoAvailableToppings.setItems(FXCollections.observableArrayList(availableToppings));
         chicagoSelectedToppings.setItems(FXCollections.observableArrayList(selectedToppings));
     }
 
+    /**
+     * Show price on TextField when pizza object is updated.
+     */
     private void updatePrice(){
         String pizzaType = chicagoTypeSelect.getValue().toString();
         if(pizzaType.equals("BBQ Chicken")){

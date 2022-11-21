@@ -28,7 +28,7 @@ public class Meatzza extends Pizza{
      * @return ArrayList of Topping objects
      */
     public static ArrayList<Topping> getMeatzzaToppings(){
-        return new ArrayList<>(List.of(new Topping[]{Topping.PEPPERONI, Topping.SAUSAGE, Topping.HAM}));
+        return new ArrayList<>(List.of(Topping.PEPPERONI, Topping.SAUSAGE, Topping.HAM));
     }
 
     /**
@@ -62,7 +62,6 @@ public class Meatzza extends Pizza{
      */
     @Override
     public String toString(){
-        StringBuilder str = new StringBuilder("Meatzza ").append(super.toString());
-        return str.toString();
+        return "Meatzza " + super.toString();
     }
 }

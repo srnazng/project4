@@ -6,7 +6,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * The MainController class is the controller for the main-view.fxml file.
+ * This class initializes UI components and handles user interaction events.
+ * @author Serena Zeng, Jackson Lee
+ */
 public class MainController {
+
+    /**
+     * Load Chicago Pizza view (create pizza)
+     */
     @FXML
     protected void onChicagoClick(){
         try {
@@ -21,6 +30,9 @@ public class MainController {
         }
     }
 
+    /**
+     * Load New York Pizza view (create pizza)
+     */
     @FXML
     protected void onNewYorkClick(){
         try {
@@ -35,6 +47,9 @@ public class MainController {
         }
     }
 
+    /**
+     * Load store orders view (see all orders)
+     */
     @FXML
     protected void onOrdersClick(){
         try {
@@ -49,6 +64,9 @@ public class MainController {
         }
     }
 
+    /**
+     * Load shopping cart view (see current order)
+     */
     @FXML
     protected void onCartClick(){
         try {

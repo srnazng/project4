@@ -28,7 +28,7 @@ public class BBQChicken extends Pizza{
      * @return ArrayList of Topping objects
      */
     public static ArrayList<Topping> getBBQChickenToppings(){
-        return new ArrayList<>(List.of(new Topping[]{Topping.BBQ_CHICKEN, Topping.ONIONS, Topping.CHEDDAR, Topping.CILANTRO}));
+        return new ArrayList<>(List.of(Topping.BBQ_CHICKEN, Topping.ONIONS, Topping.CHEDDAR, Topping.CILANTRO));
     }
 
     /**
@@ -62,7 +62,6 @@ public class BBQChicken extends Pizza{
      */
     @Override
     public String toString(){
-        StringBuilder str = new StringBuilder("BBQ Chicken ").append(super.toString());
-        return str.toString();
+        return "BBQ Chicken " + super.toString();
     }
 }

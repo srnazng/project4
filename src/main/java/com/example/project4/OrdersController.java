@@ -10,11 +10,14 @@ import javafx.stage.Stage;
 import javafx.stage.FileChooser.ExtensionFilter;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+/**
+ * The OrdersController class is the controller for the orders-view.fxml file.
+ * This class initializes UI components and handles user interaction events.
+ * @author Serena Zeng, Jackson Lee
+ */
 public class OrdersController {
     private static final DecimalFormat df = new DecimalFormat("0.00");
     @FXML
@@ -24,6 +27,9 @@ public class OrdersController {
     @FXML
     ListView pizzaList;
 
+    /**
+     * Initialize UI including order number, order details, and total.
+     */
     @FXML
     public void initialize(){
         ArrayList<Integer> orderNumberList = StoreOrder.storeOrder.getOrderNumbers();
@@ -39,6 +45,9 @@ public class OrdersController {
         }
     }
 
+    /**
+     * Update order information when new order number selected.
+     */
     @FXML
     public void setOrder(){
         Integer orderNum = (Integer) orderNumber.getValue();
@@ -52,6 +61,9 @@ public class OrdersController {
         }
     }
 
+    /**
+     * Delete selected order. Show popup on success and on failure.
+     */
     @FXML
     public void cancelOrder(){
         if(orderNumber.getValue() == null){
@@ -66,6 +78,9 @@ public class OrdersController {
         Popup.showPopup("Cancel Order", "Order Successfully Cancelled!", false);
     }
 
+    /**
+     * Called when export button clicked. Export order details to a text file.
+     */
     @FXML
     public void exportStoreOrders(){
         FileChooser chooser = new FileChooser();

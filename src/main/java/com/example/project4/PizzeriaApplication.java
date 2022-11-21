@@ -7,7 +7,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Launch point of application
+ * @author Serena Zeng, Jackson Lee
+ */
 public class PizzeriaApplication extends Application {
+    /**
+     * Sets up stage when program starts and load main view
+     * @param stage         top level container for program
+     * @throws IOException  exception for fxmlLoader.load()
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(PizzeriaApplication.class.getResource("main-view.fxml"));
@@ -17,6 +26,10 @@ public class PizzeriaApplication extends Application {
         stage.show();
     }
 
+    /**
+     * Launch application
+     * @param args  default arguments
+     */
     public static void main(String[] args) {
         launch();
     }

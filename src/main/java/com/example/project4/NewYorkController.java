@@ -5,11 +5,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.control.ButtonBar.ButtonData;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+/**
+ * The NewYorkController class is the controller for the ny-view.fxml file.
+ * This class initializes UI components and handles user interaction events.
+ * @author Serena Zeng, Jackson Lee
+ */
 public class NewYorkController {
     private static final DecimalFormat df = new DecimalFormat("0.00");
     private ArrayList<Topping> availableToppings;
@@ -27,6 +31,10 @@ public class NewYorkController {
     @FXML
     private ToggleGroup newYorkSize;
 
+    /**
+     * Create a NY pizza object with the user-selected
+     * modifications and add to current order.
+     */
     @FXML
     public void addToOrder(){
         String pizzaType = newYorkTypeSelect.getValue().toString();
@@ -52,6 +60,10 @@ public class NewYorkController {
         reset();
     }
 
+    /**
+     * Called when new Size radio button clicked.
+     * Update prices based on pizza type and newly selected size.
+     */
     @FXML
     public void updateSize(){
         String toggleSelection = newYorkSize.selectedToggleProperty()
@@ -68,6 +80,9 @@ public class NewYorkController {
         updatePrice();
     }
 
+    /**
+     * Update view (price, toppings, image) when a new pizza type is selected.
+     */
     @FXML
     public void updateView(){
         String pizzaType = newYorkTypeSelect.getValue().toString();
@@ -105,6 +120,11 @@ public class NewYorkController {
         updatePrice();
     }
 
+    /**
+     * Called when the button to add topping is pressed and the Build Your Own pizza type is selected.
+     * Price is recalculated and topping lists are updated if topping successfully added.
+     * Displays error if user attempts to add more than 7 toppings.
+     */
     @FXML
     public void addTopping(){
         Topping topping = (Topping) newYorkAvailableToppings.getSelectionModel().getSelectedItem();
@@ -120,6 +140,10 @@ public class NewYorkController {
         updatePrice();
     }
 
+    /**
+     * Called when the button to remove selected topping is pressed and the Build Your Own pizza type is selected.
+     * Price is recalculated and topping lists are updated if topping successfully removed.
+     */
     @FXML
     public void removeTopping(){
         Topping topping = (Topping) newYorkSelectedToppings.getSelectionModel().getSelectedItem();
@@ -132,6 +156,9 @@ public class NewYorkController {
         updatePrice();
     }
 
+    /**
+     * Initialize UI components
+     */
     @FXML
     public void initialize(){
         String[] pizzaTypes = {"Deluxe", "BBQ Chicken", "Meatzza", "Build Your Own"};
@@ -139,6 +166,9 @@ public class NewYorkController {
         reset();
     }
 
+    /**
+     * Reset view. Called after pizza is successfully ordered.
+     */
     private void reset(){
         newYorkTypeSelect.setValue("Build Your Own");
         availableToppings = new ArrayList<>(Topping.getAvailableToppings());
@@ -148,11 +178,17 @@ public class NewYorkController {
         updatePrice();
     }
 
+    /**
+     * Update ListView UI component containing available toppings and list of selected toppings
+     */
     private void updateToppingLists(){
         newYorkAvailableToppings.setItems(FXCollections.observableArrayList(availableToppings));
         newYorkSelectedToppings.setItems(FXCollections.observableArrayList(selectedToppings));
     }
 
+    /**
+     * Show price on TextField when pizza object is updated.
+     */
     private void updatePrice(){
         String pizzaType = newYorkTypeSelect.getValue().toString();
         if(pizzaType.equals("BBQ Chicken")){

@@ -57,7 +57,6 @@ public class BuildYourOwn extends Pizza{
      */
     @Override
     public String toString(){
-        StringBuilder str = new StringBuilder("Build Your Own ").append(super.toString());
-        return str.toString();
+        return "Build Your Own " + super.toString();
     }
 }
