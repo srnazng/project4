@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c295e93c-d323-438a-8ef3-03be5d905f48" name="Changes" comment="Added tests and export to external file">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/BuildYourOwn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/BuildYourOwn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/OrdersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/StoreOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/StoreOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/project4/BuildYourOwnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/project4/BuildYourOwnTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +38,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/Jackson/IdeaProjects/gym-membership"
+    "last_opened_file_path": "C:/Users/Jackson/IdeaProjects/gym-membership",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -156,6 +151,14 @@
       <option name="presentableId" value="Default" />
       <updated>1668791330005</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added tests and export to external file">
+      <created>1668966288454</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668966288455</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
