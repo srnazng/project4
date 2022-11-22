@@ -28,7 +28,7 @@ public class Meatzza extends Pizza{
      * @return ArrayList of Topping objects
      */
     public static ArrayList<Topping> getMeatzzaToppings(){
-        return new ArrayList<>(List.of(Topping.PEPPERONI, Topping.SAUSAGE, Topping.HAM));
+        return new ArrayList<>(List.of(Topping.PEPPERONI, Topping.SAUSAGE, Topping.HAM, Topping.BEEF));
     }
 
     /**

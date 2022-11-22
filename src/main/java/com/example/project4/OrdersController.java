@@ -21,17 +21,17 @@ import java.util.ArrayList;
 public class OrdersController {
     private static final DecimalFormat df = new DecimalFormat("0.00");
     @FXML
-    ComboBox orderNumber;
+    private ComboBox orderNumber;
     @FXML
-    TextField orderTotal;
+    private TextField orderTotal;
     @FXML
-    ListView pizzaList;
+    private ListView pizzaList;
 
     /**
      * Initialize UI including order number, order details, and total.
      */
     @FXML
-    public void initialize(){
+    private void initialize(){
         ArrayList<Integer> orderNumberList = StoreOrder.storeOrder.getOrderNumbers();
         orderNumber.setItems(FXCollections.observableArrayList(orderNumberList));
         if(orderNumberList.size() > 0){
@@ -49,7 +49,7 @@ public class OrdersController {
      * Update order information when new order number selected.
      */
     @FXML
-    public void setOrder(){
+    private void setOrder(){
         Integer orderNum = (Integer) orderNumber.getValue();
         if(orderNum != null){
             Order order = StoreOrder.storeOrder.getOrder(orderNum);
@@ -65,7 +65,7 @@ public class OrdersController {
      * Delete selected order. Show popup on success and on failure.
      */
     @FXML
-    public void cancelOrder(){
+    private void cancelOrder(){
         if(orderNumber.getValue() == null){
             Popup.showPopup("Cancel Order Error", "No Order Selected", true);
             return;
@@ -82,7 +82,7 @@ public class OrdersController {
      * Called when export button clicked. Export order details to a text file.
      */
     @FXML
-    public void exportStoreOrders(){
+    private void exportStoreOrders(){
         FileChooser chooser = new FileChooser();
         chooser.setTitle("Open Target File for the Export");
         chooser.getExtensionFilters().addAll(new ExtensionFilter("Text Files", "*.txt"),

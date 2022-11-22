@@ -28,7 +28,8 @@ public class BBQChicken extends Pizza{
      * @return ArrayList of Topping objects
      */
     public static ArrayList<Topping> getBBQChickenToppings(){
-        return new ArrayList<>(List.of(Topping.BBQ_CHICKEN, Topping.ONIONS, Topping.CHEDDAR, Topping.CILANTRO));
+        return new ArrayList<>(List.of(Topping.BBQ_CHICKEN, Topping.GREEN_PEPPER,
+                Topping.CHEDDAR, Topping.PROVOLONE));
     }
 
     /**

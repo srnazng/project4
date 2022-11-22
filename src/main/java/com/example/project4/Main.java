@@ -12,6 +12,8 @@ import java.io.IOException;
  * @author Serena Zeng, Jackson Lee
  */
 public class Main extends Application {
+    private static final int SIZE = 600;
+
     /**
      * Sets up stage when program starts and load main view
      * @param stage         top level container for program
@@ -20,7 +22,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("main-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
+        Scene scene = new Scene(fxmlLoader.load(), SIZE, SIZE);
         stage.setTitle("RU Pizzeria");
         stage.setScene(scene);
         stage.show();

@@ -54,8 +54,8 @@ class BuildYourOwnTest {
         pizza.add(Topping.PINEAPPLE);
         assertEquals(pizza.price(), SMALL_THREE_TOPPINGS, FUZZ_FACTOR);
 
-        pizza.add(Topping.MUSHROOMS);
-        assertEquals(pizza.price(), smallFourToppings, fuzzFactor);
+        pizza.add(Topping.MUSHROOM);
+        assertEquals(pizza.price(), SMALL_FOUR_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.BROCCOLI);
         assertEquals(pizza.price(), SMALL_FIVE_TOPPINGS, FUZZ_FACTOR);
@@ -66,8 +66,8 @@ class BuildYourOwnTest {
         pizza.add(Topping.BEEF);
         assertEquals(pizza.price(), SMALL_SEVEN_TOPPINGS, FUZZ_FACTOR);
 
-        pizza.add(Topping.PEPPERS);
-        assertEquals(pizza.price(), toppingLimitError, fuzzFactor);
+        pizza.add(Topping.GREEN_PEPPER);
+        assertEquals(pizza.price(), TOPPING_LIMIT_ERROR, FUZZ_FACTOR);
     }
 
     @Test
@@ -88,8 +88,8 @@ class BuildYourOwnTest {
         pizza.add(Topping.PINEAPPLE);
         assertEquals(pizza.price(), MEDIUM_THREE_TOPPINGS, FUZZ_FACTOR);
 
-        pizza.add(Topping.MUSHROOMS);
-        assertEquals(pizza.price(), mediumFourToppings, fuzzFactor);
+        pizza.add(Topping.MUSHROOM);
+        assertEquals(pizza.price(), MEDIUM_FOUR_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.BROCCOLI);
         assertEquals(pizza.price(), MEDIUM_FIVE_TOPPINGS, FUZZ_FACTOR);
@@ -100,8 +100,8 @@ class BuildYourOwnTest {
         pizza.add(Topping.BEEF);
         assertEquals(pizza.price(), MEDIUM_SEVEN_TOPPINGS, FUZZ_FACTOR);
 
-        pizza.add(Topping.PEPPERS);
-        assertEquals(pizza.price(), toppingLimitError, fuzzFactor);
+        pizza.add(Topping.GREEN_PEPPER);
+        assertEquals(pizza.price(), TOPPING_LIMIT_ERROR, FUZZ_FACTOR);
     }
 
     @Test
@@ -122,8 +122,8 @@ class BuildYourOwnTest {
         pizza.add(Topping.PINEAPPLE);
         assertEquals(pizza.price(), LARGE_THREE_TOPPINGS, FUZZ_FACTOR);
 
-        pizza.add(Topping.MUSHROOMS);
-        assertEquals(pizza.price(), largeFourToppings, fuzzFactor);
+        pizza.add(Topping.MUSHROOM);
+        assertEquals(pizza.price(), LARGE_FOUR_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.BROCCOLI);
         assertEquals(pizza.price(), LARGE_FIVE_TOPPINGS, FUZZ_FACTOR);
@@ -134,7 +134,7 @@ class BuildYourOwnTest {
         pizza.add(Topping.BEEF);
         assertEquals(pizza.price(), LARGE_SEVEN_TOPPINGS, FUZZ_FACTOR);
 
-        pizza.add(Topping.PEPPERS);
-        assertEquals(pizza.price(), toppingLimitError, fuzzFactor);
+        pizza.add(Topping.GREEN_PEPPER);
+        assertEquals(pizza.price(), TOPPING_LIMIT_ERROR, FUZZ_FACTOR);
     }
 }

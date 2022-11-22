@@ -10,6 +10,8 @@ public class BuildYourOwn extends Pizza{
     private static final double SMALL_PRICE = 8.99;
     private static final double MED_PRICE = 10.99;
     private static final double LARGE_PRICE = 12.99;
+    private static final double PRICE_PER_TOPPING = 1.59;
+    private static final int INVALID = -1;
 
     /**
      * Create a new BuildYourOwn object.
@@ -27,10 +29,10 @@ public class BuildYourOwn extends Pizza{
     @Override
     public double price() {
         Size size = getSize();
-        if (getToppings().size() > 7){
-            return -1;
+        if (getToppings().size() > Pizza.MAX_TOPPINGS){
+            return INVALID;
         }
-        double topping_price = getToppings().size() * 1.59;
+        double topping_price = getToppings().size() * PRICE_PER_TOPPING;
         if(size == Size.SMALL) return SMALL_PRICE + topping_price;
         if(size == Size.MEDIUM) return MED_PRICE + topping_price;
         return LARGE_PRICE + topping_price;
@@ -44,7 +46,7 @@ public class BuildYourOwn extends Pizza{
      * @return              price of pizza as double
      */
     public static double calculatePrice(Size size, int numToppings) {
-        double topping_price = numToppings * 1.59;
+        double topping_price = numToppings * PRICE_PER_TOPPING;
         if(size == Size.SMALL) return SMALL_PRICE + topping_price;
         if(size == Size.MEDIUM) return MED_PRICE + topping_price;
         return LARGE_PRICE + topping_price;

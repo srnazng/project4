@@ -8,15 +8,17 @@ import java.util.List;
  * @author Serena Zeng, Jackson Lee
  */
 public enum Topping {
-    PEPPERONI, SAUSAGE, PINEAPPLE, MUSHROOMS, SPINACH, BBQ_CHICKEN, OLIVES, PEPPERS, BROCCOLI, HAM, TOMATOES, PENNE, ONIONS, CILANTRO, CHEDDAR;
+    PEPPERONI, SAUSAGE, PINEAPPLE, MUSHROOM, BBQ_CHICKEN, GREEN_PEPPER,
+    BROCCOLI, HAM, TOMATOES, ONION, CHEDDAR, PROVOLONE, BEEF;
 
     /**
      * Get list of all toppings
      * @return  ArrayList of Topping objects
      */
     public static ArrayList<Topping> getAvailableToppings(){
-        return new ArrayList<>(List.of(PEPPERONI, SAUSAGE, PINEAPPLE, MUSHROOMS,
-                SPINACH, BBQ_CHICKEN, OLIVES, PEPPERS, BROCCOLI, HAM, TOMATOES, PENNE, ONIONS, CILANTRO, CHEDDAR));
+        return new ArrayList<>(List.of(PEPPERONI, SAUSAGE, PINEAPPLE, MUSHROOM,
+                BBQ_CHICKEN, GREEN_PEPPER, BROCCOLI, HAM, TOMATOES,
+                ONION, CHEDDAR, PROVOLONE, BEEF));
     }
 
     /**

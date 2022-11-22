@@ -39,7 +39,7 @@ public class ChicagoController {
      * modifications and add to current order.
      */
     @FXML
-    public void addToOrder(){
+    private void addToOrder(){
         String pizzaType = chicagoTypeSelect.getValue().toString();
         ChicagoPizza factory = new ChicagoPizza();
         Pizza pizza;
@@ -68,7 +68,7 @@ public class ChicagoController {
      * Update prices based on pizza type and newly selected size.
      */
     @FXML
-    public void updateSize(){
+    private void updateSize(){
         String toggleSelection = chicagoSize.selectedToggleProperty()
                 .getValue().toString().split("'")[1];
         if(toggleSelection.equals("Small")){
@@ -87,7 +87,7 @@ public class ChicagoController {
      * Update view (price, toppings, image) when a new pizza type is selected.
      */
     @FXML
-    public void updateView(){
+    private void updateView(){
         String pizzaType = chicagoTypeSelect.getValue().toString();
         availableToppings = new ArrayList<>(Topping.getAvailableToppings());
         if(pizzaType.equals("Deluxe") || pizzaType.equals("BBQ Chicken") || pizzaType.equals("Meatzza")){
@@ -129,7 +129,7 @@ public class ChicagoController {
      * Displays error if user attempts to add more than 7 toppings.
      */
     @FXML
-    public void addTopping(){
+    private void addTopping(){
         Topping topping = (Topping) chicagoAvailableToppings.getSelectionModel().getSelectedItem();
         if (topping == null){
             Popup.showPopup("Build Your Own", "No Topping Selected", true);
@@ -152,7 +152,7 @@ public class ChicagoController {
      * Price is recalculated and topping lists are updated if topping successfully removed.
      */
     @FXML
-    public void removeTopping(){
+    private void removeTopping(){
         Topping topping = (Topping) chicagoSelectedToppings.getSelectionModel().getSelectedItem();
         if (topping == null){
             Popup.showPopup("Build Your Own", "No Topping Selected", true);
@@ -170,7 +170,7 @@ public class ChicagoController {
      * Initialize UI components
      */
     @FXML
-    public void initialize(){
+    private void initialize(){
         String[] pizzaTypes = {"Deluxe", "BBQ Chicken", "Meatzza", "Build Your Own"};
         chicagoTypeSelect.setItems(FXCollections.observableArrayList(pizzaTypes));
         reset();

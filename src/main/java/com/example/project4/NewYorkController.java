@@ -36,7 +36,7 @@ public class NewYorkController {
      * modifications and add to current order.
      */
     @FXML
-    public void addToOrder(){
+    private void addToOrder(){
         String pizzaType = newYorkTypeSelect.getValue().toString();
         NYPizza factory = new NYPizza();
         Pizza pizza;
@@ -65,7 +65,7 @@ public class NewYorkController {
      * Update prices based on pizza type and newly selected size.
      */
     @FXML
-    public void updateSize(){
+    private void updateSize(){
         String toggleSelection = newYorkSize.selectedToggleProperty()
                 .getValue().toString().split("'")[1];
         if(toggleSelection.equals("Small")){
@@ -84,7 +84,7 @@ public class NewYorkController {
      * Update view (price, toppings, image) when a new pizza type is selected.
      */
     @FXML
-    public void updateView(){
+    private void updateView(){
         String pizzaType = newYorkTypeSelect.getValue().toString();
         availableToppings = new ArrayList<>(Topping.getAvailableToppings());
         if(pizzaType.equals("Deluxe") || pizzaType.equals("BBQ Chicken") || pizzaType.equals("Meatzza")){
@@ -126,7 +126,7 @@ public class NewYorkController {
      * Displays error if user attempts to add more than 7 toppings.
      */
     @FXML
-    public void addTopping(){
+    private void addTopping(){
         Topping topping = (Topping) newYorkAvailableToppings.getSelectionModel().getSelectedItem();
         if (topping == null){
             Popup.showPopup("Build Your Own", "No Topping Selected", true);
@@ -149,7 +149,7 @@ public class NewYorkController {
      * Price is recalculated and topping lists are updated if topping successfully removed.
      */
     @FXML
-    public void removeTopping(){
+    private void removeTopping(){
         Topping topping = (Topping) newYorkSelectedToppings.getSelectionModel().getSelectedItem();
         if (topping == null){
             Popup.showPopup("Build Your Own", "No Topping Selected", true);
@@ -167,7 +167,7 @@ public class NewYorkController {
      * Initialize UI components
      */
     @FXML
-    public void initialize(){
+    private void initialize(){
         String[] pizzaTypes = {"Deluxe", "BBQ Chicken", "Meatzza", "Build Your Own"};
         newYorkTypeSelect.setItems(FXCollections.observableArrayList(pizzaTypes));
         reset();

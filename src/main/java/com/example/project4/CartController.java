@@ -15,16 +15,16 @@ import java.text.DecimalFormat;
 public class CartController {
     private static final DecimalFormat df = new DecimalFormat("0.00");
     @FXML
-    ListView pizzaList;
+    private ListView pizzaList;
     @FXML
-    TextField orderNumber, subtotal, salesTax, orderTotal;
+    private TextField orderNumber, subtotal, salesTax, orderTotal;
 
     /**
      * Called when "Place Order" button clicked. Completes the order and clears the order information
      * to allow for the next order. A popup is shown on success and on failure.
      */
     @FXML
-    public void placeOrder(){
+    private void placeOrder(){
         if(StoreOrder.storeOrder.getCurrentOrder().getPizzaList().size() < 1){
             Popup.showPopup("Empty Order", "No Pizzas Added to Order", true);
             return;
@@ -38,7 +38,7 @@ public class CartController {
      * Removes the selected pizza from the current order. A popup is shown on success and on failure.
      */
     @FXML
-    public void removePizza(){
+    private void removePizza(){
         if(StoreOrder.storeOrder.getCurrentOrder().getPizzaList().size() < 1 ||
                 pizzaList.getSelectionModel().getSelectedItem() == null){
             Popup.showPopup("Error Removing Pizza", "No Pizza Selected", true);
@@ -54,7 +54,7 @@ public class CartController {
      * Remove all pizzas from current order. A popup is shown on success.
      */
     @FXML
-    public void clearOrder(){
+    private void clearOrder(){
         StoreOrder.storeOrder.getCurrentOrder().clear();
         initialize();
         Popup.showPopup("Clear Order", "Order Successfully Cleared!", false);
@@ -64,7 +64,7 @@ public class CartController {
      * Initialize UI including list of pizzas in order, price amounts, and order number.
      */
     @FXML
-    public void initialize(){
+    private void initialize(){
         pizzaList.setItems(FXCollections.observableArrayList(StoreOrder.storeOrder.getCurrentOrder().getPizzaList()));
         subtotal.setText(df.format(StoreOrder.storeOrder.getCurrentOrder().getSubtotal()));
         salesTax.setText(df.format(StoreOrder.storeOrder.getCurrentOrder().getSalesTax()));

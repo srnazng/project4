@@ -17,7 +17,7 @@ public class MainController {
      * Load Chicago Pizza view (create pizza)
      */
     @FXML
-    protected void onChicagoClick(){
+    private void onChicagoClick(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("chicago-view.fxml"));
             Parent root = fxmlLoader.load();
@@ -34,7 +34,7 @@ public class MainController {
      * Load New York Pizza view (create pizza)
      */
     @FXML
-    protected void onNewYorkClick(){
+    private void onNewYorkClick(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ny-view.fxml"));
             Parent root = fxmlLoader.load();
@@ -51,7 +51,7 @@ public class MainController {
      * Load store orders view (see all orders)
      */
     @FXML
-    protected void onOrdersClick(){
+    private void onOrdersClick(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("orders-view.fxml"));
             Parent root = fxmlLoader.load();
@@ -68,7 +68,7 @@ public class MainController {
      * Load shopping cart view (see current order)
      */
     @FXML
-    protected void onCartClick(){
+    private void onCartClick(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cart-view.fxml"));
             Parent root = fxmlLoader.load();

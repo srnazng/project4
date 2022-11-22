@@ -29,7 +29,7 @@ public class Deluxe extends Pizza{
      */
     public static ArrayList<Topping> getDeluxeToppings(){
         return new ArrayList<>(List.of(Topping.PEPPERONI, Topping.SAUSAGE,
-                Topping.MUSHROOMS, Topping.ONIONS, Topping.PEPPERS));
+                Topping.MUSHROOM, Topping.ONION, Topping.GREEN_PEPPER));
     }
 
     /**
