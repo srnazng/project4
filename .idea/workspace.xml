@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c295e93c-d323-438a-8ef3-03be5d905f48" name="Changes" comment="Alerts!!! AHHHHH">
+    <list default="true" id="c295e93c-d323-438a-8ef3-03be5d905f48" name="Changes" comment="javadoc">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="e919914a-3966-4ff0-9fbd-308b4ddb11e2" name="Changes by serena" comment="Changes by serena">
@@ -20,7 +21,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/NewYorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/NewYorkController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/OrdersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/Topping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/project4/BuildYourOwnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/project4/BuildYourOwnTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,10 +150,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BuildYourOwnTest" />
+        <item itemvalue="JUnit.BuildYourOwnTest.testSmall" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.PizzeriaApplication" />
         <item itemvalue="JUnit.BuildYourOwnTest.testMedium" />
-        <item itemvalue="JUnit.BuildYourOwnTest.testSmall" />
       </list>
     </recent_temporary>
   </component>

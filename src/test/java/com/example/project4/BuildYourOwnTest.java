@@ -22,7 +22,6 @@ class BuildYourOwnTest {
     private static final double MEDIUM_FIVE_TOPPINGS = 18.94;
     private static final double MEDIUM_SIX_TOPPINGS = 20.53;
     private static final double MEDIUM_SEVEN_TOPPINGS = 22.12;
-
     private static final double LARGE_NO_TOPPING = 12.99;
     private static final double LARGE_ONE_TOPPING = 14.58;
     private static final double LARGE_TWO_TOPPINGS = 16.17;
@@ -31,9 +30,7 @@ class BuildYourOwnTest {
     private static final double LARGE_FIVE_TOPPINGS = 20.94;
     private static final double LARGE_SIX_TOPPINGS = 22.53;
     private static final double LARGE_SEVEN_TOPPINGS = 24.12;
-
     private static final double TOPPING_LIMIT_ERROR = -1;
-
     private static final double FUZZ_FACTOR = 0.0001; //how close doubles can be before they are considered equal
     @Test
     void testSmall(){
