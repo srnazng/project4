@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c295e93c-d323-438a-8ef3-03be5d905f48" name="Changes" comment="Alerts!!! AHHHHH">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/ChicagoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/ChicagoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/NewYorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/NewYorkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/project4/BuildYourOwnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/project4/BuildYourOwnTest.java" afterDir="false" />
     </list>
-    <list id="e919914a-3966-4ff0-9fbd-308b4ddb11e2" name="Changes by serena" comment="">
+    <list id="e919914a-3966-4ff0-9fbd-308b4ddb11e2" name="Changes by serena" comment="Changes by serena">
       <change beforePath="$PROJECT_DIR$/pizzeriaClassDiagram.drawio" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/BBQChicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/BBQChicken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/BuildYourOwn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/BuildYourOwn.java" afterDir="false" />
@@ -42,50 +38,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/test/java/com/example/project4/BuildYourOwnTest.java">
-      <ranges>
-        <range start1="56" end1="57" start2="56" end2="57" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="59" end1="60" start2="59" end2="60" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="65" end1="66" start2="65" end2="66" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="68" end1="69" start2="68" end2="69" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="90" end1="91" start2="90" end2="91" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="93" end1="94" start2="93" end2="94" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="99" end1="100" start2="99" end2="100" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="102" end1="103" start2="102" end2="103" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="124" end1="125" start2="124" end2="125" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="127" end1="128" start2="127" end2="128" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="133" end1="134" start2="133" end2="134" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="136" end1="137" start2="136" end2="137" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/example/project4/ChicagoController.java">
-      <ranges>
-        <range start1="41" end1="42" start2="41" end2="42" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="70" end1="71" start2="70" end2="71" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="89" end1="90" start2="89" end2="90" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="131" end1="132" start2="131" end2="132" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="133" end1="134" start2="133" end2="140" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="139" end1="142" start2="145" end2="146" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="150" end1="151" start2="154" end2="155" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="152" end1="153" start2="156" end2="160" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="165" end1="166" start2="172" end2="173" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/example/project4/NewYorkController.java">
-      <ranges>
-        <range start1="38" end1="39" start2="38" end2="39" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="67" end1="68" start2="67" end2="68" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="86" end1="87" start2="86" end2="87" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="128" end1="129" start2="128" end2="129" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="130" end1="131" start2="130" end2="137" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="136" end1="139" start2="142" end2="143" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="147" end1="148" start2="151" end2="152" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-        <range start1="149" end1="150" start2="153" end2="157" changelist="c295e93c-d323-438a-8ef3-03be5d905f48" />
-        <range start1="162" end1="163" start2="169" end2="170" changelist="e919914a-3966-4ff0-9fbd-308b4ddb11e2" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -228,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668999293252</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Alerts!!! AHHHHH">
+      <created>1669090195914</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669090195914</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +203,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added tests and export to external file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tests and export to external file" />
+    <MESSAGE value="Alerts!!! AHHHHH" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alerts!!! AHHHHH" />
   </component>
 </project>

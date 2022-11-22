@@ -5,36 +5,36 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BuildYourOwnTest {
-    private static final double smallNoTopping = 8.99;
-    private static final double smallOneTopping = 10.58;
-    private static final double smallTwoToppings = 12.17;
-    private static final double smallThreeToppings = 13.76;
-    private static final double smallFourToppings = 15.35;
-    private static final double smallFiveToppings = 16.94;
-    private static final double smallSixToppings = 18.53;
-    private static final double smallSevenToppings = 20.12;
+    private static final double SMALL_NO_TOPPING = 8.99;
+    private static final double SMALL_ONE_TOPPING = 10.58;
+    private static final double SMALL_TWO_TOPPINGS = 12.17;
+    private static final double SMALL_THREE_TOPPINGS = 13.76;
+    private static final double SMALL_FOUR_TOPPINGS = 15.35;
+    private static final double SMALL_FIVE_TOPPINGS = 16.94;
+    private static final double SMALL_SIX_TOPPINGS = 18.53;
+    private static final double SMALL_SEVEN_TOPPINGS = 20.12;
 
-    private static final double mediumNoTopping = 10.99;
-    private static final double mediumOneTopping = 12.58;
-    private static final double mediumTwoToppings = 14.17;
-    private static final double mediumThreeToppings = 15.76;
-    private static final double mediumFourToppings = 17.35;
-    private static final double mediumFiveToppings = 18.94;
-    private static final double mediumSixToppings = 20.53;
-    private static final double mediumSevenToppings = 22.12;
+    private static final double MEDIUM_NO_TOPPING = 10.99;
+    private static final double MEDIUM_ONE_TOPPING = 12.58;
+    private static final double MEDIUM_TWO_TOPPINGS = 14.17;
+    private static final double MEDIUM_THREE_TOPPINGS = 15.76;
+    private static final double MEDIUM_FOUR_TOPPINGS = 17.35;
+    private static final double MEDIUM_FIVE_TOPPINGS = 18.94;
+    private static final double MEDIUM_SIX_TOPPINGS = 20.53;
+    private static final double MEDIUM_SEVEN_TOPPINGS = 22.12;
 
-    private static final double largeNoTopping = 12.99;
-    private static final double largeOneTopping = 14.58;
-    private static final double largeTwoToppings = 16.17;
-    private static final double largeThreeToppings = 17.76;
-    private static final double largeFourToppings = 19.35;
-    private static final double largeFiveToppings = 20.94;
-    private static final double largeSixToppings = 22.53;
-    private static final double largeSevenToppings = 24.12;
+    private static final double LARGE_NO_TOPPING = 12.99;
+    private static final double LARGE_ONE_TOPPING = 14.58;
+    private static final double LARGE_TWO_TOPPINGS = 16.17;
+    private static final double LARGE_THREE_TOPPINGS = 17.76;
+    private static final double LARGE_FOUR_TOPPINGS = 19.35;
+    private static final double LARGE_FIVE_TOPPINGS = 20.94;
+    private static final double LARGE_SIX_TOPPINGS = 22.53;
+    private static final double LARGE_SEVEN_TOPPINGS = 24.12;
 
-    private static final double toppingLimitError = -1;
+    private static final double TOPPING_LIMIT_ERROR = -1;
 
-    private static final double fuzzFactor = 0.0001; //how close doubles can be before they are considered equal
+    private static final double FUZZ_FACTOR = 0.0001; //how close doubles can be before they are considered equal
     @Test
     void testSmall(){
         //Small pizzas should have a 8.99 base price, and add 1.59 per topping.
@@ -43,28 +43,28 @@ class BuildYourOwnTest {
         NYPizza factory = new NYPizza();
         Pizza pizza = factory.createBuildYourOwn();
         pizza.setSize(Size.SMALL);
-        assertEquals(pizza.price(), smallNoTopping, fuzzFactor);
+        assertEquals(pizza.price(), SMALL_NO_TOPPING, FUZZ_FACTOR);
 
         pizza.add(Topping.PEPPERONI);
-        assertEquals(pizza.price(), smallOneTopping, fuzzFactor);
+        assertEquals(pizza.price(), SMALL_ONE_TOPPING, FUZZ_FACTOR);
 
         pizza.add(Topping.SAUSAGE);
-        assertEquals(pizza.price(), smallTwoToppings, fuzzFactor);
+        assertEquals(pizza.price(), SMALL_TWO_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.PINEAPPLE);
-        assertEquals(pizza.price(), smallThreeToppings, fuzzFactor);
+        assertEquals(pizza.price(), SMALL_THREE_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.MUSHROOMS);
         assertEquals(pizza.price(), smallFourToppings, fuzzFactor);
 
         pizza.add(Topping.BROCCOLI);
-        assertEquals(pizza.price(), smallFiveToppings, fuzzFactor);
+        assertEquals(pizza.price(), SMALL_FIVE_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.BBQ_CHICKEN);
-        assertEquals(pizza.price(), smallSixToppings, fuzzFactor);
+        assertEquals(pizza.price(), SMALL_SIX_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.BEEF);
-        assertEquals(pizza.price(), smallSevenToppings, fuzzFactor);
+        assertEquals(pizza.price(), SMALL_SEVEN_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.PEPPERS);
         assertEquals(pizza.price(), toppingLimitError, fuzzFactor);
@@ -77,28 +77,28 @@ class BuildYourOwnTest {
         NYPizza factory = new NYPizza();
         Pizza pizza = factory.createBuildYourOwn();
         pizza.setSize(Size.MEDIUM);
-        assertEquals(pizza.price(), mediumNoTopping, fuzzFactor);
+        assertEquals(pizza.price(), MEDIUM_NO_TOPPING, FUZZ_FACTOR);
 
         pizza.add(Topping.PEPPERONI);
-        assertEquals(pizza.price(), mediumOneTopping, fuzzFactor);
+        assertEquals(pizza.price(), MEDIUM_ONE_TOPPING, FUZZ_FACTOR);
 
         pizza.add(Topping.SAUSAGE);
-        assertEquals(pizza.price(), mediumTwoToppings, fuzzFactor);
+        assertEquals(pizza.price(), MEDIUM_TWO_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.PINEAPPLE);
-        assertEquals(pizza.price(), mediumThreeToppings, fuzzFactor);
+        assertEquals(pizza.price(), MEDIUM_THREE_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.MUSHROOMS);
         assertEquals(pizza.price(), mediumFourToppings, fuzzFactor);
 
         pizza.add(Topping.BROCCOLI);
-        assertEquals(pizza.price(), mediumFiveToppings, fuzzFactor);
+        assertEquals(pizza.price(), MEDIUM_FIVE_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.BBQ_CHICKEN);
-        assertEquals(pizza.price(), mediumSixToppings, fuzzFactor);
+        assertEquals(pizza.price(), MEDIUM_SIX_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.BEEF);
-        assertEquals(pizza.price(), mediumSevenToppings, fuzzFactor);
+        assertEquals(pizza.price(), MEDIUM_SEVEN_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.PEPPERS);
         assertEquals(pizza.price(), toppingLimitError, fuzzFactor);
@@ -111,28 +111,28 @@ class BuildYourOwnTest {
         NYPizza factory = new NYPizza();
         Pizza pizza = factory.createBuildYourOwn();
         pizza.setSize(Size.LARGE);
-        assertEquals(pizza.price(), largeNoTopping, fuzzFactor);
+        assertEquals(pizza.price(), LARGE_NO_TOPPING, FUZZ_FACTOR);
 
         pizza.add(Topping.PEPPERONI);
-        assertEquals(pizza.price(), largeOneTopping, fuzzFactor);
+        assertEquals(pizza.price(), LARGE_ONE_TOPPING, FUZZ_FACTOR);
 
         pizza.add(Topping.SAUSAGE);
-        assertEquals(pizza.price(), largeTwoToppings, fuzzFactor);
+        assertEquals(pizza.price(), LARGE_TWO_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.PINEAPPLE);
-        assertEquals(pizza.price(), largeThreeToppings, fuzzFactor);
+        assertEquals(pizza.price(), LARGE_THREE_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.MUSHROOMS);
         assertEquals(pizza.price(), largeFourToppings, fuzzFactor);
 
         pizza.add(Topping.BROCCOLI);
-        assertEquals(pizza.price(), largeFiveToppings, fuzzFactor);
+        assertEquals(pizza.price(), LARGE_FIVE_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.BBQ_CHICKEN);
-        assertEquals(pizza.price(), largeSixToppings, fuzzFactor);
+        assertEquals(pizza.price(), LARGE_SIX_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.BEEF);
-        assertEquals(pizza.price(), largeSevenToppings, fuzzFactor);
+        assertEquals(pizza.price(), LARGE_SEVEN_TOPPINGS, FUZZ_FACTOR);
 
         pizza.add(Topping.PEPPERS);
         assertEquals(pizza.price(), toppingLimitError, fuzzFactor);
