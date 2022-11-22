@@ -131,15 +131,19 @@ public class ChicagoController {
     @FXML
     public void addTopping(){
         Topping topping = (Topping) chicagoAvailableToppings.getSelectionModel().getSelectedItem();
-        if(topping != null && selectedToppings.size() < Pizza.MAX_TOPPINGS){
+        if (topping == null){
+            Popup.showPopup("Build Your Own", "No Topping Selected", true);
+        }
+        else if (selectedToppings.size() >= Pizza.MAX_TOPPINGS){
+            Popup.showPopup("Build Your Own", "Maximum Number of Toppings (7) Exceeded", true);
+        }
+        else {
             availableToppings.remove(topping);
             selectedToppings.add(topping);
             chicagoAvailableToppings.setItems(FXCollections.observableArrayList(availableToppings));
             chicagoSelectedToppings.setItems(FXCollections.observableArrayList(selectedToppings));
         }
-        else{
-            Popup.showPopup("Build Your Own", "Maximum Number of Toppings (7) Exceeded", true);
-        }
+
         updatePrice();
     }
 
@@ -150,7 +154,10 @@ public class ChicagoController {
     @FXML
     public void removeTopping(){
         Topping topping = (Topping) chicagoSelectedToppings.getSelectionModel().getSelectedItem();
-        if(topping != null){
+        if (topping == null){
+            Popup.showPopup("Build Your Own", "No Topping Selected", true);
+        }
+        else {
             availableToppings.add(topping);
             selectedToppings.remove(topping);
             chicagoAvailableToppings.setItems(FXCollections.observableArrayList(availableToppings));

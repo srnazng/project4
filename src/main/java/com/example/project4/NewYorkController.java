@@ -128,15 +128,19 @@ public class NewYorkController {
     @FXML
     public void addTopping(){
         Topping topping = (Topping) newYorkAvailableToppings.getSelectionModel().getSelectedItem();
-        if(topping != null && selectedToppings.size() < Pizza.MAX_TOPPINGS){
+        if (topping == null){
+            Popup.showPopup("Build Your Own", "No Topping Selected", true);
+        }
+        else if (selectedToppings.size() >= Pizza.MAX_TOPPINGS){
+            Popup.showPopup("Build Your Own", "Maximum Number of Toppings (7) Exceeded", true);
+        }
+        else {
             availableToppings.remove(topping);
             selectedToppings.add(topping);
             newYorkAvailableToppings.setItems(FXCollections.observableArrayList(availableToppings));
             newYorkSelectedToppings.setItems(FXCollections.observableArrayList(selectedToppings));
         }
-        else{
-            Popup.showPopup("Build Your Own", "Maximum Number of Toppings (7) Exceeded", true);
-        }
+
         updatePrice();
     }
 
@@ -147,7 +151,10 @@ public class NewYorkController {
     @FXML
     public void removeTopping(){
         Topping topping = (Topping) newYorkSelectedToppings.getSelectionModel().getSelectedItem();
-        if(topping != null){
+        if (topping == null){
+            Popup.showPopup("Build Your Own", "No Topping Selected", true);
+        }
+        else {
             availableToppings.add(topping);
             selectedToppings.remove(topping);
             newYorkAvailableToppings.setItems(FXCollections.observableArrayList(availableToppings));
